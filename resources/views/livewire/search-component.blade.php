@@ -48,10 +48,11 @@
 
                 </div><!--end wrap shop control-->
 
+                @if ($products->count() > 0)
                 <div class="row">
 
                     <ul class="product-list grid-products equal-container">
-                        @foreach($products as $product)
+                        @foreach ($products as $product)
                             <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
                                 <div class="product product-style-3 equal-elem ">
                                     <div class="product-thumnail">
@@ -71,6 +72,9 @@
                     </ul>
 
                 </div>
+                @else
+                    <p>{{ __('shop.no_product') }}</p>
+                @endif
 
                 <div class="wrap-pagination-info">
                     {{ $products->links() }}

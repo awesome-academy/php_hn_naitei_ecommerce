@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\LanguageController;
+use App\Http\Livewire\Admin\AdminAddProductComponent;
+use App\Http\Livewire\Admin\AdminEditProductComponent;
+use App\Http\Livewire\Admin\AdminProductComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\DetailsComponent;
@@ -40,6 +43,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:sanctum', 'verified']], function () {
+    Route::get('dashboard', AdminDashboardComponent::class)->name('dashboard');
+
+    Route::get('products', AdminProductComponent::class)->name('products');
+    Route::get('products/add', AdminAddProductComponent::class)->name('addproduct');
+    Route::get('product/edit/{product_slug}', AdminEditProductComponent::class)->name('editproduct');
 });

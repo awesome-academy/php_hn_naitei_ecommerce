@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/demo-bower/assets/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/demo-bower/assets/css/color-01.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/demo-bower/assets/css/flexslider.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/demo-bower/assets/css/custom.css') }}">
     @livewireStyles
 </head>
 <body class="home-page home-01 ">
@@ -50,6 +51,9 @@
                                             <ul class="submenu curency" >
                                                 <li class="menu-item" >
                                                     <a title="Dashboard" href="{{ route('admin.dashboard') }}">{{ __('home.dashboad') }}</a>
+                                                </li>
+                                                <li class="menu-item" >
+                                                    <a title="Products" href="{{ route('admin.products') }}">{{ __('admin-product.home_product') }}</a>
                                                 </li>
                                                 <form method="POST" action="{{ route('logout') }}">
                                                     @csrf
