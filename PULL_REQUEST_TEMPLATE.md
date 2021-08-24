@@ -3,7 +3,7 @@
 -->
 
 ## Related Tickets:
-- [#Ticket ID](https://edu-redmine.sun-asterisk.vn/issues/xxxx)
+- [#TaskID](https://edu-redmine.sun-asterisk.vn/issues/xxxx)
 
 ## WHAT this PR does?
 <!--

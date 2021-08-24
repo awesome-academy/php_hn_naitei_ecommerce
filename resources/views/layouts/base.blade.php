@@ -37,9 +37,9 @@
                     <div class="topbar-menu right-menu">
                         <ul>
                             <li class="menu-item lang-menu menu-item-has-children parent">
-                                <a title="English" href="{{ route('language', 'en') }}"><span class="img label-before"><img src="bower_components/demo-bower/assets/images/lang-en.png" alt="lang-en"></span>{{ __('home.en') }}<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <a title="English" href="{{ route('language', 'en') }}"><span class="img label-before"><img src="{{ asset('bower_components/demo-bower/assets/images/lang-en.png') }}" alt="lang-en"></span>{{ __('home.en') }}<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="submenu lang" >
-                                    <li class="menu-item" ><a title="hungary" href="{{ route('language', 'vi') }}"><span class="img label-before"><img src="bower_components/demo-bower/assets/images/lang-vi.png" alt="lang-vi"></span>{{ __('home.vi') }}</a></li>
+                                    <li class="menu-item" ><a title="hungary" href="{{ route('language', 'vi') }}"><span class="img label-before"><img src="{{ asset('bower_components/demo-bower/assets/images/lang-vi.png') }}" alt="lang-vi"></span>{{ __('home.vi') }}</a></li>
                                 </ul>
                             </li>
                             @if (Route::has('login'))
