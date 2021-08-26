@@ -3,7 +3,7 @@
     <div class="container">
         <div class="wrap-breadcrumb">
             <ul>
-                <li class="item-link"><a href="#" class="link">{{ __('details.home') }}</a></li>
+                <li class="item-link"><a href="/" class="link">{{ __('details.home') }}</a></li>
                 <li class="item-link"><span>{{ __('details.detail') }}</span></li>
             </ul>
         </div>
@@ -44,17 +44,8 @@
                                 @endif
                             </p>
                         </div>
-                        <div class="quantity">
-                            <span>{{ __('details.quantity') }}:</span>
-                            <div class="quantity-input">
-                                <input type="text" name="product-quatity" value="1" data-max="120" pattern="[0-9]*" >
-
-                                <a class="btn btn-reduce" href="#"></a>
-                                <a class="btn btn-increase" href="#"></a>
-                            </div>
-                        </div>
                         <div class="wrap-butons">
-                            <a href="#" class="btn add-to-cart">{{ __('details.add_to_cart') }}</a>
+                            <a href="#" class="btn add-to-cart" wire:click.prevent="store({{ $product->id }}, '{{ $product->name }}', {{ $product->regular_price }})">{{ __('details.add_to_cart') }}</a>
                         </div>
                     </div>
                     <div class="advance-info">

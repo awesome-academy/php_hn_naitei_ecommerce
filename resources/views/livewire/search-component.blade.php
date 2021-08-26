@@ -56,7 +56,7 @@
                                 <div class="product product-style-3 equal-elem ">
                                     <div class="product-thumnail">
                                         <a href="{{ route('product.details', ['slug' => $product->slug]) }}" title="{{ $product->name }}">
-                                            <figure><img src="bower_components/demo-bower/assets/images/products/{{ $product->images->get(0)->name }}" alt="{{ $product->name }}"></figure>
+                                            <figure><img src="{{ asset('bower_components/demo-bower/assets/images/products/' . $product->images->get(0)->name) }}" alt="{{ $product->name }}"></figure>
                                         </a>
                                     </div>
                                     <div class="product-info">

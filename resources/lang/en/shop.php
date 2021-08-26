@@ -11,5 +11,5 @@ return [
     'all_categories' => 'All categories',
     'price' => 'Price',
     'filter' => 'Filter',
-    'title' => 'Digital & Electronics'
+    'title' => 'Digital & Electronics',
 ];
