@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\Images;
 use App\Models\Product;
 use Database\Factories\ProductFactory;
@@ -20,7 +21,9 @@ class DatabaseSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         Images::truncate();
         Product::truncate();
+        Category::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        Category::factory(5)->create();
         Product::factory()
             ->count(50)
             ->has(Images::factory()->count(6))
