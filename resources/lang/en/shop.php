@@ -12,5 +12,6 @@ return [
     'price' => 'Price',
     'filter' => 'Filter',
     'title' => 'Digital & Electronics',
-    'no_product' => 'No products'
+    'no_product' => 'No products',
+    'product_cate' => 'Product Category',
 ];

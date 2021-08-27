@@ -11,7 +11,9 @@ use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +38,8 @@ Route::get('/checkout', CheckoutComponent::class)->name('checkout');
 Route::get('/product/{slug}', DetailsComponent::class)->name('product.details');
 
 Route::get('/search', SearchComponent::class)->name('product.search');
+
+Route::get('/product-category/{category_slug}', CategoryComponent::class)->name('product.category');
 
 Route::get('/change-language/{language}', [LanguageController::class, 'changeLanguage'])->name('language');
 

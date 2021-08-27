@@ -5,6 +5,8 @@
         <div class="wrap-breadcrumb">
             <ul>
                 <li class="item-link"><a href="/" class="link">{{ __('shop.home') }}</a></li>
+                <li class="item-link"><span>{{ __('shop.product_cate') }}</span></li>
+                <li class="item-link"><span>{{ $category_name }}</span></li>
             </ul>
         </div>
         <div class="row">
@@ -13,34 +15,31 @@
 
                 <div class="banner-shop">
                     <a href="#" class="banner-link">
-                        <figure><img src="bower_components/demo-bower/assets/images/shop-banner.jpg" alt=""></figure>
+                        <figure><img src="{{ asset('bower_components/demo-bower/assets/images/shop-banner.jpg') }}" alt=""></figure>
                     </a>
                 </div>
 
                 <div class="wrap-shop-control">
 
-                    <h1 class="shop-title">{{ __('shop.title') }}</h1>
+                    <h1 class="shop-title">{{ $category_name }}</h1>
 
                     <div class="wrap-right">
 
                         <div class="sort-item orderby ">
-                            <select name="orderby" class="use-chosen" wire:model="sorting">
+                            <select name="orderby" class="use-chosen" >
                                 <option value="menu_order" selected="selected">{{ __('shop.default_sorting') }}</option>
-                                <option value="date">{{ __('shop.sort_by_newest') }}</option>
+                                <option value="rating">{{ __('shop.sort_by_rating') }}</option>
                                 <option value="price">{{ __('shop.sort_by_price_low') }}</option>
                                 <option value="price-desc">{{ __('shop.sort_by_price_high') }}</option>
                             </select>
                         </div>
 
                         <div class="sort-item product-per-page">
-                            <select name="post-per-page" class="use-chosen" wire:model="pagesize">
-                                <option value="12" selected="selected">12 {{ __('shop.per_page') }}</option>
-                                <option value="16">16 {{ __('shop.per_page') }}</option>
-                                <option value="18">18 {{ __('shop.per_page') }}</option>
-                                <option value="21">21 {{ __('shop.per_page') }}</option>
-                                <option value="24">24 {{ __('shop.per_page') }}</option>
-                                <option value="30">30 {{ __('shop.per_page') }}</option>
-                                <option value="32">32 {{ __('shop.per_page') }}</option>
+                            <select name="post-per-page" class="use-chosen" >
+                                <option value="{{ config('constant.products_per_page')[0] }}" selected="selected">{{ config('constant.products_per_page')[0] }} {{ __('shop.per_page') }}</option>
+                                @foreach (config('constant.products_per_page') as $productsPerPage)
+                                    <option value="{{ $productsPerPage }}">{{ $productsPerPage }} {{ __('shop.per_page') }}</option>
+                                @endforeach
                             </select>
                         </div>
 
@@ -62,11 +61,12 @@
                                 <div class="product-info">
                                     <a href="#" class="product-name"><span>{{ $product->name }}</span></a>
                                     <div class="wrap-price"><span class="product-price">${{ $product->regular_price }}</span></div>
-                                    <a href="#" class="btn add-to-cart" wire:click.prevent="store({{ $product->id }}, '{{ $product->name }}', {{ $product->regular_price }})">{{ __('shop.add_to_cart') }}</a>
+                                    <a href="#" class="btn add-to-cart">{{ __('shop.add_to_cart') }}</a>
                                 </div>
                             </div>
                         </li>
                         @endforeach
+
                     </ul>
 
                 </div>
