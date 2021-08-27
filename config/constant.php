@@ -10,4 +10,5 @@ return [
     'ordered_status' => 'ordered',
     'pending_status' => 'pending',
     'cod_payment_method' => 'cod',
+    'first_home_cate' => 1,
 ];
