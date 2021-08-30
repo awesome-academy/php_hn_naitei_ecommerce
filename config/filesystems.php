@@ -32,7 +32,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root' => public_path('bower_components/demo-bower/assets/images'),
         ],
 
         'public' => [
