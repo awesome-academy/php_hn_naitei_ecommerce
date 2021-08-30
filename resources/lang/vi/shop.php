@@ -11,4 +11,5 @@ return [
     'all_categories' => 'Tất cả thể loại',
     'price' => 'Giá',
     'filter' => 'Lọc',
+    'shop' => 'Cửa hàng',
 ];
