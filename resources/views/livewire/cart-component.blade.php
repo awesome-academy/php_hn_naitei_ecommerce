@@ -9,7 +9,7 @@
             </ul>
         </div>
         <div class=" main-content-area">
-
+            @if (Cart::count() > 0)
             <div class="wrap-iten-in-cart">
                 @if (Session::has('success_message'))
                     <div class="alert alert-success">
@@ -48,7 +48,7 @@
                 @else
                     <p>{{ __('cart.blank_cart') }}</p>
                 @endif
-                
+
             </div>
 
             <div class="summary">
@@ -60,7 +60,7 @@
                     <p class="summary-info total-info "><span class="title">{{ __('cart.total') }}</span><b class="index">${{ Cart::total() }}</b></p>
                 </div>
                 <div class="checkout-info">
-                    <a class="btn btn-checkout" href="checkout.html">{{ __('cart.checkout') }}</a>
+                    <a class="btn btn-checkout" href="#" wire:click.prevent="checkout()">{{ __('cart.checkout') }}</a>
                     <a class="link-to-shop" href="{{ route('shop') }}">{{ __('cart.cont_shopping') }}<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                 </div>
                 <div class="update-clear">
@@ -68,7 +68,13 @@
                     <a class="btn btn-update" href="#">{{ __('cart.update_cart') }}</a>
                 </div>
             </div>
-
+            @else
+                <div class="text-center" >
+                    <h1>{{ __('cart.cart_empty') }}</h1>
+                    <p>{{ __('cart.add_now') }}</p>
+                    <a href="{{ route('shop') }}">{{ __('cart.shop_now') }}</a>
+                </div>
+            @endif
         </div><!--end main content area-->
     </div><!--end container-->
 

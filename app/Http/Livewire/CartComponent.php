@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Cart;
 
@@ -32,8 +33,28 @@ class CartComponent extends Component
         Cart::destroy();
     }
 
+    public function checkout()
+    {
+        if (Auth::check()) {
+            return redirect()->route('checkout');
+        } else {
+            return redirect()->route('login');
+        }
+    }
+
+    public function setAmountForCheckout()
+    {
+        session()->put('checkout', [
+            'subtotal' => Cart::subtotal(),
+            'tax' => Cart::tax(),
+            'total' => Cart::total(),
+        ]);
+    }
+
     public function render()
     {
+        $this->setAmountForCheckout();
+
         return view('livewire.cart-component')->layout('layouts.base');
     }
 }

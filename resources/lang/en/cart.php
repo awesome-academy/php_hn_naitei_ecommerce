@@ -17,5 +17,8 @@ return [
     'clear_cart' => 'Clear shopping cart',
     'update_cart' => 'Update shopping cart',
     'delete_item' => 'Delete from your cart',
-    'blank_cart' => 'No item in your cart'
+    'blank_cart' => 'No item in your cart',
+    'cart_empty' => 'Your cart is empty!',
+    'add_now' => 'Add items to it now',
+    'shop_now' => 'Shop Now',
 ];
