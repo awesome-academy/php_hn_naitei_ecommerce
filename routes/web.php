@@ -13,6 +13,7 @@ use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Livewire\Admin\AdminManageUserComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
 use App\Http\Livewire\Admin\AdminOrderComponent;
@@ -76,4 +77,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:sanc
     
     Route::get('orders', AdminOrderComponent::class)->name('orders');
     Route::get('orders/{orderId}', AdminOrderDetailsComponent::class)->name('orderdetails');
+    
+    Route::get('users', AdminManageUserComponent::class)->name('users');
 });

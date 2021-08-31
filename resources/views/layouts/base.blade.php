@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/demo-bower/assets/css/custom.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/admin.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/orders.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/toggle-button.css') }}">
     @livewireStyles
 </head>
 <body class="home-page home-01 ">
@@ -47,7 +48,7 @@
                             </li>
                             @if (Route::has('login'))
                                 @auth
-                                    @if (Auth::user()->role === 'ADM')
+                                    @if (Auth::user()->role === config('constant.role_admin'))
                                         <li class="menu-item menu-item-has-children parent" >
                                             <a title="My account" href="#">{{ __('home.my_account') }} ({{ Auth::user()->name }})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                             <ul class="submenu curency" >
@@ -65,6 +66,9 @@
                                                 </li>
                                                 <li class="menu-item" >
                                                     <a title="Orders" href="{{ route('admin.orders') }}">{{ __('home.orders') }}</a>
+                                                </li>
+                                                <li class="menu-item" >
+                                                    <a title="Users" href="{{ route('admin.users') }}">{{ __('home.user_manage') }}</a>
                                                 </li>
                                                 <form method="POST" action="{{ route('logout') }}">
                                                     @csrf

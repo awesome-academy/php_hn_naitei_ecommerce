@@ -30,4 +30,5 @@ return [
     'profile' => 'Hồ sơ',
     'manage_home_categories' => 'Quản lý thể loại trên trang chủ',
     'orders' => 'Đơn hàng',
+    'user_manage' => 'Quản lý tài khoản',
 ];
