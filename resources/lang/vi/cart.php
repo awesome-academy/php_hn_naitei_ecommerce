@@ -18,4 +18,7 @@ return [
     'update_cart' => 'Cập nhật giỏ hàng',
     'delete_item' => 'Xóa khỏi giỏ hàng',
     'blank_cart' => 'Không có sản phẩm nào trong giỏ hàng',
+    'cart_empty' => 'Giỏ hàng rỗng!',
+    'add_now' => 'Hãy thêm sản phẩm vào!',
+    'shop_now' => 'Mua sắm ngay',
 ];
