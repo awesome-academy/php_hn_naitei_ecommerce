@@ -18,8 +18,8 @@ class SearchComponent extends Component
 
     public function mount()
     {
-        $this->sorting = config('default_sorting');
-        $this->pagesize = config('default_pagesize');
+        $this->sorting = config('constant.default_sorting');
+        $this->pagesize = config('constant.default_pagesize');
         $this->fill(request()->only('search', 'product_cate', 'product_cate_id'));
     }
 
