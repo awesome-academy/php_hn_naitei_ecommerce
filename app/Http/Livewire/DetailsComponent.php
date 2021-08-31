@@ -16,9 +16,9 @@ class DetailsComponent extends Component
         $this->slug = $slug;
     }
 
-    public function store($product_id, $product_name, $product_price)
+    public function store($productId, $productName, $productPrice)
     {
-        Cart::add($product_id, $product_name, config('constant.defautl_add_to_cart_amount'), $product_price)
+        Cart::add($productId, $productName, config('constant.defautl_add_to_cart_amount'), $productPrice)
             ->associate(Product::class);
         session()->flash('success_message', __('cart.added_success_msg'));
 

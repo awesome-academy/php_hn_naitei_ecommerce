@@ -12,5 +12,6 @@ return [
     'price' => 'Giá',
     'filter' => 'Lọc',
     'shop' => 'Cửa hàng',
-    'no_product' => 'Không có sản phẩm'
+    'no_product' => 'Không có sản phẩm',
+    'product_cate' => 'Thể loại sản phẩm',
 ];
