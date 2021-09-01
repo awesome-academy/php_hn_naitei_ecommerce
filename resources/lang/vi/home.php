@@ -28,4 +28,5 @@ return [
     'items' => 'sản phẩm',
     'home' => 'Trang chủ',
     'profile' => 'Hồ sơ',
+    'manage_home_categories' => 'Quản lý thể loại trên trang chủ',
 ];

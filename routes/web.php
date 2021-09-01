@@ -16,6 +16,7 @@ use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
 use App\Http\Livewire\ThankyouComponent;
+use App\Http\Livewire\Admin\AdminHomeCategoryComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\User\UserProfileComponent;
 use Illuminate\Support\Facades\Route;
@@ -64,4 +65,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:sanc
     Route::get('categories', AdminCategoryComponent::class)->name('categories');
     Route::get('category/add', AdminAddCategoryComponent::class)->name('addcategory');
     Route::get('category/edit/{categorySlug}', AdminEditCategoryComponent::class)->name('editcategory');
+
+    Route::get('home-categories', AdminHomeCategoryComponent::class)->name('homecategories');
 });

@@ -16,4 +16,11 @@ return [
     'name_required' => 'Category name is requried',
     'slug_required' => 'Category slug is required',
     'slug_existed' => 'Category slug has been existed',
+    'manage_home_categories' => 'Manage Home Categories',
+    'choose_cate' => 'Choose categories',
+    'no_of_products' => 'Number of Products',
+    'save' => 'Save',
+    'home_cate_updated_success_msg' => 'HomeCategory has been updated successfully',
+    'no_of_products_required' => 'Number of products is required',
+    'numeric' => 'Input must be a number',
 ];

@@ -16,4 +16,11 @@ return [
     'name_required' => 'Tên thể loại không thể bỏ trống',
     'slug_required' => 'Slug không thể bỏ trống',
     'slug_existed' => 'Slug đã tồn tại',
+    'manage_home_categories' => 'Quản lý thể loại trên trang chủ',
+    'choose_cate' => 'Chọn các thể loại',
+    'no_of_products' => 'Số lượng sản phẩm',
+    'save' => 'Lưu',
+    'home_cate_updated_success_msg' => 'Thể loại trên trang chủ đã được cập nhật thành công',
+    'no_of_products_required' => 'Số lượng sản phẩm không thể bỏ trống',
+    'numeric' => 'Số lượng sản phẩm phải là một số',
 ];
