@@ -29,4 +29,5 @@ return [
     'home' => 'Trang chủ',
     'profile' => 'Hồ sơ',
     'manage_home_categories' => 'Quản lý thể loại trên trang chủ',
+    'orders' => 'Đơn hàng',
 ];

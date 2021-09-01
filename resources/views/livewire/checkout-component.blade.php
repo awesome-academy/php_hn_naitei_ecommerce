@@ -77,10 +77,10 @@
                     <p class="summary-info"><span class="title">{{ __('checkout.check_money') }}</span></p>
                     <div class="choose-payment-methods">
                         <label class="payment-method">
-                            <input name="payment-method" id="payment-method-bank" value="cod" type="radio" wire:model="paymentmode">
+                            <input name="payment-method" id="payment-method-bank" value="{{ config('constant.cod_payment_method') }}" type="radio" wire:model="paymentmode">
                             <span>{{ __('checkout.cod') }}</span>
                         </label>
-                        @error('paymentmode') <span class="text-danger">{{ $message }}}</span> @enderror
+                        @error('paymentmode') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
                     @if(Session::has('checkout'))
                     <p class="summary-info grand-total">

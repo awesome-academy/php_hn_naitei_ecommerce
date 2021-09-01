@@ -62,6 +62,9 @@
                                                 <li class="menu-item" >
                                                     <a title="Home Categories" href="{{ route('admin.homecategories') }}">{{ __('home.manage_home_categories') }}</a>
                                                 </li>
+                                                <li class="menu-item" >
+                                                    <a title="Orders" href="{{ route('admin.orders') }}">{{ __('home.orders') }}</a>
+                                                </li>
                                                 <form method="POST" action="{{ route('logout') }}">
                                                     @csrf
                                                     <li class="menu-item logout-btn">
