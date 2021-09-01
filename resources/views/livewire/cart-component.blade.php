@@ -31,7 +31,7 @@
                                 <div class="quantity">
                                     <div class="quantity-input">
                                         <input type="text" name="product-quatity" value="{{ $product->qty }}" data-max="120" pattern="[0-9]*" >
-                                        <a class="btn btn-increase" href="#" wire:click.prevent="increaseQuantity('{{ $product->rowId }}')"></a>
+                                        <a class="btn btn-increase {{ $product->qty === $product->model->quantity ? 'hidden' : '' }}" href="#" wire:click.prevent="increaseQuantity('{{ $product->rowId }}')"></a>
                                         <a class="btn btn-reduce" href="#" wire:click.prevent="decreaseQuantity('{{ $product->rowId }}')"></a>
                                     </div>
                                 </div>
@@ -48,7 +48,6 @@
                 @else
                     <p>{{ __('cart.blank_cart') }}</p>
                 @endif
-
             </div>
 
             <div class="summary">

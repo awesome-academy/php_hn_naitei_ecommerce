@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Admin;
 use App\Models\Product;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Cart;
 
 class AdminProductComponent extends Component
 {
@@ -14,6 +15,15 @@ class AdminProductComponent extends Component
     {
         $product = Product::find($id);
         $product->delete();
+        
+        $cartItems = Cart::content();
+        foreach ($cartItems as $item) {
+            if ($id == $item->id) {
+                Cart::remove($item->rowId);
+                $this->emitTo('cart-count-component', 'refreshComponent');
+            }
+        }
+
         session()->flash('message', __('admin-product.success_delete'));
     }
 
