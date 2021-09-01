@@ -24,6 +24,7 @@ class AdminAddProductComponent extends Component
     public $quantity;
     public $image;
     public $category_id;
+    public $galleryImages;
     protected $rules = [
         'name' => 'required',
         'slug' => 'required',
@@ -52,10 +53,22 @@ class AdminAddProductComponent extends Component
         $imageName = Carbon::now()->timestamp. '.' . $this->image->extension();
         $this->image->storeAs('products', $imageName);
 
+        $galleryImageNames = array();
+        if ($this->galleryImages) {
+            foreach ($this->galleryImages as $key => $galleryImage) {
+                $galleryImageName = Carbon::now()->timestamp. $key . '.' . $galleryImage->extension();
+                $galleryImage->storeAs('products', $galleryImageName);
+                array_push($galleryImageNames, $galleryImageName);
+            }
+        }
+
         DB::beginTransaction();
         try {
             $product = Product::create($data);
             $product->images()->create(['name' => $imageName]);
+            foreach ($galleryImageNames as $galleryImageName) {
+                $product->images()->create(['name' => $galleryImageName]);
+            }
 
             DB::commit();
             session()->flash('message', __('admin-product.success_add_new'));
