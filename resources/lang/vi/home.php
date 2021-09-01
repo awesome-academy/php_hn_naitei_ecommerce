@@ -27,4 +27,5 @@ return [
     'online_support_desc' => 'Hỗ trợ trực tuyến 24/7',
     'items' => 'sản phẩm',
     'home' => 'Trang chủ',
+    'profile' => 'Hồ sơ',
 ];

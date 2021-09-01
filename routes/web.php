@@ -17,6 +17,7 @@ use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
 use App\Http\Livewire\ThankyouComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
+use App\Http\Livewire\User\UserProfileComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,8 +49,9 @@ Route::get('/product-category/{category_slug}', CategoryComponent::class)->name(
 
 Route::get('/change-language/{language}', [LanguageController::class, 'changeLanguage'])->name('language');
 
-Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
+Route::group(['prefix' => 'user', 'as' => 'user.', 'middleware' => ['auth:sanctum', 'verified']], function () {
+    Route::get('dashboard', UserDashboardComponent::class)->name('dashboard');
+    Route::get('user/profile', UserProfileComponent::class)->name('profile');
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:sanctum', 'verified']], function () {
