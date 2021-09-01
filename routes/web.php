@@ -4,6 +4,8 @@ use App\Http\Controllers\LanguageController;
 use App\Http\Livewire\Admin\AdminAddProductComponent;
 use App\Http\Livewire\Admin\AdminEditProductComponent;
 use App\Http\Livewire\Admin\AdminProductComponent;
+use App\Http\Livewire\Admin\AdminAddCategoryComponent;
+use App\Http\Livewire\Admin\AdminCategoryComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\DetailsComponent;
@@ -12,8 +14,8 @@ use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\CategoryComponent;
+use App\Http\Livewire\Admin\AdminEditCategoryComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
-use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,4 +55,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:sanc
     Route::get('products', AdminProductComponent::class)->name('products');
     Route::get('products/add', AdminAddProductComponent::class)->name('addproduct');
     Route::get('product/edit/{product_slug}', AdminEditProductComponent::class)->name('editproduct');
+
+    Route::get('categories', AdminCategoryComponent::class)->name('categories');
+    Route::get('category/add', AdminAddCategoryComponent::class)->name('addcategory');
+    Route::get('category/edit/{categorySlug}', AdminEditCategoryComponent::class)->name('editcategory');
 });
