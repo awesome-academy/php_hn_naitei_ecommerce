@@ -44,9 +44,9 @@ class CheckoutComponent extends Component
     {
         $data = $this->validate();
         $data['user_id'] = Auth::user()->id;
-        $data['subtotal'] = floatval(session()->get('checkout')['subtotal']);
-        $data['tax'] = floatval(session()->get('checkout')['tax']);
-        $data['total'] = floatval(session()->get('checkout')['total']);
+        $data['subtotal'] = session()->get('checkout')['subtotal'];
+        $data['tax'] = session()->get('checkout')['tax'];
+        $data['total'] = session()->get('checkout')['total'];
         $data['status'] = config('constant.ordered_status');
         $order = Order::create($data);
 
