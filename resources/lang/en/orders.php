@@ -39,4 +39,6 @@ return [
     'refunded' => 'Refunded',
     'status_update_success_msg' => 'Status has been updated successfully',
     'cod' => 'COD',
+    'cancel' => 'Cancel Order',
+    'canceled_success_msg' => 'This order has been canceled successfully',
 ];

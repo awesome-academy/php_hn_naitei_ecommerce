@@ -20,6 +20,8 @@ use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
 use App\Http\Livewire\ThankyouComponent;
 use App\Http\Livewire\Admin\AdminHomeCategoryComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
+use App\Http\Livewire\User\UserOderDetailsComponent;
+use App\Http\Livewire\User\UserOrdersComponent;
 use App\Http\Livewire\User\UserProfileComponent;
 use Illuminate\Support\Facades\Route;
 
@@ -55,6 +57,8 @@ Route::get('/change-language/{language}', [LanguageController::class, 'changeLan
 Route::group(['prefix' => 'user', 'as' => 'user.', 'middleware' => ['auth:sanctum', 'verified']], function () {
     Route::get('dashboard', UserDashboardComponent::class)->name('dashboard');
     Route::get('user/profile', UserProfileComponent::class)->name('profile');
+    Route::get('orders', UserOrdersComponent::class)->name('orders');
+    Route::get('orders/{orderId}', UserOderDetailsComponent::class)->name('orderdetails');
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:sanctum', 'verified']], function () {
