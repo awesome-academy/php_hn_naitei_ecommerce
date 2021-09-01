@@ -27,4 +27,5 @@ return [
     'online_support_desc' => 'We have support 24/7',
     'items' => 'items',
     'home' => 'Home',
+    'profile' => 'Profile',
 ];
