@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'home' => 'home',
+    'login' => 'login',
+    'bill' => 'Billing Address',
+    'fname' => 'First name',
+    'placeholder_fname' => 'Your first name',
+    'lname' => 'Last name',
+    'placeholder_lname' => 'Your last name',
+    'email' => 'Email Address',
+    'placeholder_email' => 'Type your email',
+    'number' => 'Phone number',
+    'placeholder_number' => '10 digits format',
+    'line1' => 'Line1',
+    'line2' => 'Line2',
+    'placeholder_line' => 'Street at apartment number',
+    'country' => 'Country',
+    'placeholder_country' => 'United States',
+    'province' => 'Province',
+    'city' => 'Town / City',
+    'zipcode' => 'Postcode / ZIP',
+    'payment' => 'Payment Method',
+    'check_money' => 'Check / Money order',
+    'cod' => 'Cash On Delivery',
+    'total' => 'Grand Total',
+    'submit' => 'Place order now',
+];

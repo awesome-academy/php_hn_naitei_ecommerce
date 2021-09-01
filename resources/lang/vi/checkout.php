@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'home' => 'Trang chủ',
+    'login' => 'Đăng nhập',
+    'bill' => 'Địa chỉ đơn hàng',
+    'fname' => 'Tên đầu',
+    'placeholder_fname' => 'Tên đầu của bạn',
+    'lname' => 'Tên cuối',
+    'placeholder_lname' => 'Tên cuối của bạn',
+    'email' => 'Địa chỉ email',
+    'placeholder_email' => 'Nhập địa chỉ email',
+    'number' => 'Số điện thoại',
+    'placeholder_number' => 'Theo chuẩn 10 số',
+    'line1' => 'Địa chỉ 1',
+    'line2' => 'Địa chỉ 2',
+    'placeholder_line' => 'Số đường',
+    'country' => 'Quốc gia',
+    'placeholder_country' => 'Việt Nam',
+    'province' => 'Địa bàn tỉnh',
+    'city' => 'Tỉnh / Thành phố',
+    'zipcode' => 'Mã bưu điện',
+    'payment' => 'Phương thức chi trả',
+    'check_money' => 'Hãy kiểm tra tiền trước khi đặt',
+    'cod' => 'Trả tiền khi nhận hàng',
+    'total' => 'Tổng tiền',
+    'submit' => 'Đặt hàng ngay',
+];
