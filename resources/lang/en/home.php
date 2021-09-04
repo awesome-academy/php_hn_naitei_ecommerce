@@ -29,4 +29,5 @@ return [
     'home' => 'Home',
     'profile' => 'Profile',
     'manage_home_categories' => 'Manage Home Categories',
+    'orders' => 'Orders',
 ];
