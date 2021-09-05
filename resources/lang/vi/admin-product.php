@@ -21,5 +21,6 @@ return [
     'success_add_new' => 'Sản phẩm đã được tạo thành công',
     'success_edit' => 'sản phẩm đã được sửa thành công',
     'success_delete' => 'Sản phẩm đã được xóa',
-    'home_product' => 'Sản phẩm'
+    'home_product' => 'Sản phẩm',
+    'gallery' => 'Bộ sưu tập',
 ];

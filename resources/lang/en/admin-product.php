@@ -21,5 +21,6 @@ return [
     'success_add_new' => 'Product has been created successfully',
     'success_edit' => 'Product has been updated successfully',
     'success_delete' => 'Product has been deleted',
-    'home_product' => 'Products'
+    'home_product' => 'Products',
+    'gallery' => 'Gallery',
 ];
