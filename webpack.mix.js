@@ -19,6 +19,8 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.js('resources/js/index.js', 'public/js');
 
+mix.css('resources/css/orders.css', 'public/css');
+
 if (mix.inProduction()) {
     mix.version();
 }

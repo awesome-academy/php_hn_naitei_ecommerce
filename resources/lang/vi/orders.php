@@ -39,4 +39,6 @@ return [
     'refunded' => 'Đã hoàn tiền',
     'status_update_success_msg' => 'Trạng thái đơn hàng đã được cập nhật thành công',
     'cod' => 'COD',
+    'cancel' => 'Hủy đơn hàng',
+    'canceled_success_msg' => 'Đơn hàng đã được hủy thành công',
 ];
