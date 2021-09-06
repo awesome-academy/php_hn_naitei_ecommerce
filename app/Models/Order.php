@@ -44,4 +44,19 @@ class Order extends Model
     {
         return $this->hasOne(Transaction::class);
     }
+
+    public function setSubtotalAttribute($value)
+    {
+        $this->attributes['subtotal'] = str_replace(',', '', $value);
+    }
+
+    public function setTaxAttribute($value)
+    {
+        $this->attributes['tax'] = str_replace(',', '', $value);
+    }
+
+    public function setTotalAttribute($value)
+    {
+        $this->attributes['total'] = str_replace(',', '', $value);
+    }
 }
