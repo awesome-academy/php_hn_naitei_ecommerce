@@ -16,6 +16,7 @@ return [
     'failed' => 'Tài khoản mật khẩu không đúng',
     'password' => 'Mật khẩu được cung cấp không chính xác.',
     'throttle' => 'Quá nhiều lần đăng nhập sai. Vui lòng thử lại sau',
+    'inactive' => 'Tài khoản của bạn đã bị khóa',
     'home' => 'Trang chủ',
     'login' => 'Đăng nhập',
     'login_title' => 'Đăng nhập vào tài khoản của bạn',

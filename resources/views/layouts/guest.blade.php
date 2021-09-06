@@ -44,7 +44,7 @@
                             </li>
                             @if (Route::has('login'))
                                 @auth
-                                    @if (Auth::user()->role === 'ADM')
+                                    @if (Auth::user()->role === config('constant.role_admin'))
                                         <li class="menu-item menu-item-has-children parent" >
                                             <a title="My account" href="#">{{ __('home.my_account') }} ({{ Auth::user()->name }})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                             <ul class="submenu curency" >

@@ -30,4 +30,5 @@ return [
     'profile' => 'Profile',
     'manage_home_categories' => 'Manage Home Categories',
     'orders' => 'Orders',
+    'user_manage' => 'Manage Accounts',
 ];

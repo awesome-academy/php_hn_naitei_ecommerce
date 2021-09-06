@@ -14,7 +14,11 @@
                     <div class=" main-content-area">
                         <div class="wrap-login-item ">
                             <div class="login-form form-item form-stl">
-                                <x-jet-validation-errors class="mb-4 text-red-600" />
+                                @if (Session::has('message'))
+                                    <p class="mb-4 text-red-600">{{ Session::get('message') }}</p>
+                                @else
+                                    <x-jet-validation-errors class="mb-4 text-red-600" />
+                                @endif
                                 <form name="frm-login" method="POST" action="{{ route('login') }}">
                                     @csrf
                                     <fieldset class="wrap-title">

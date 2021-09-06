@@ -2,5 +2,6 @@
     "/js/app.js": "/js/app.js",
     "/js/index.js": "/js/index.js",
     "/css/orders.css": "/css/orders.css",
+    "/css/toggle-button.css": "/css/toggle-button.css",
     "/css/app.css": "/css/app.css"
 }

@@ -16,4 +16,6 @@ return [
     'trans_approved' => 2,
     'trans_declined' => 3,
     'trans_refunded' => 4,
+    'role_user' => 'USR',
+    'role_admin' => 'ADM',
 ];

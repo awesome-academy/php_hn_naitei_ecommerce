@@ -17,6 +17,8 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
     ]);
 
+mix.css('resources/css/toggle-button.css', 'public/css');
+
 mix.js('resources/js/index.js', 'public/js');
 
 mix.css('resources/css/orders.css', 'public/css');
