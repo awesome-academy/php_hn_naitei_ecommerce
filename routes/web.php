@@ -24,6 +24,7 @@ use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\User\UserOderDetailsComponent;
 use App\Http\Livewire\User\UserOrdersComponent;
 use App\Http\Livewire\User\UserProfileComponent;
+use App\Http\Livewire\User\UserReviewComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -60,6 +61,7 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'middleware' => ['auth:sanctu
     Route::get('user/profile', UserProfileComponent::class)->name('profile');
     Route::get('orders', UserOrdersComponent::class)->name('orders');
     Route::get('orders/{orderId}', UserOderDetailsComponent::class)->name('orderdetails');
+    Route::get('orders/review/{orderProductId}', UserReviewComponent::class)->name('review');
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:sanctum', 'verified']], function () {
@@ -74,7 +76,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:sanc
     Route::get('category/edit/{categorySlug}', AdminEditCategoryComponent::class)->name('editcategory');
 
     Route::get('home-categories', AdminHomeCategoryComponent::class)->name('homecategories');
-    
+
     Route::get('orders', AdminOrderComponent::class)->name('orders');
     Route::get('orders/{orderId}', AdminOrderDetailsComponent::class)->name('orderdetails');
     

@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Images;
 use App\Models\Product;
+use App\Models\Review;
 use Livewire\Component;
 use Cart;
 
@@ -28,8 +29,9 @@ class DetailsComponent extends Component
     public function render()
     {
         $product = Product::where('slug', $this->slug)->first();
-        $images = Images::where('product_id', $product->id)->get();
+        $images = $product->images;
+        $reviews = $product->reviews;
 
-        return view('livewire.details-component', compact('product', 'images'))->layout('layouts.base');
+        return view('livewire.details-component', compact('product', 'images', 'reviews'))->layout('layouts.base');
     }
 }
