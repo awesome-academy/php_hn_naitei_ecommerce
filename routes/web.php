@@ -51,7 +51,7 @@ Route::get('/search', SearchComponent::class)->name('product.search');
 
 Route::get('/thank-you', ThankyouComponent::class)->name('thankyou');
 
-Route::get('/product-category/{category_slug}', CategoryComponent::class)->name('product.category');
+Route::get('/product-category/{categorySlug}', CategoryComponent::class)->name('product.category');
 
 Route::get('/change-language/{language}', [LanguageController::class, 'changeLanguage'])->name('language');
 
