@@ -64,7 +64,6 @@
                 </div>
                 <div class="update-clear">
                     <a class="btn btn-clear" href="#" wire:click.prevent="destroyAll()">{{ __('cart.clear_cart') }}</a>
-                    <a class="btn btn-update" href="#">{{ __('cart.update_cart') }}</a>
                 </div>
             </div>
             @else

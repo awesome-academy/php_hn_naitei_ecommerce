@@ -7,12 +7,13 @@ use App\Models\Images;
 use App\Models\Product;
 use Livewire\Component;
 use Cart;
-use WithPagination;
+use Livewire\WithPagination;
 
 class ShopComponent extends Component
 {
     public $sorting;
     public $pagesize;
+    use WithPagination;
 
     public function mount()
     {
