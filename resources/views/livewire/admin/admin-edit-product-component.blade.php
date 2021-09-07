@@ -71,9 +71,25 @@
                                 @if ($newimage)
                                     <img src="{{ $newimage->temporaryUrl() }}" width="120" />
                                 @else
-                                    <img src="{{asset('bower_components/demo-bower/assets/images/products')}}/{{$image}}" width="120" />
+                                    <img src="{{ asset('bower_components/demo-bower/assets/images/products') }}/{{ $image }}" width="120" />
                                 @endif
                                 @error('image') <p class="text-danger">{{ $message }}</p> @enderror
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">{{ __('admin-product.gallery') }}</label>
+                            <div class="col-md-4">
+                                <input type="file" class="input-file" wire:model="newGalleryImages" multiple>
+                                @if ($newGalleryImages)
+                                    @foreach ($newGalleryImages as $image)
+                                        <img src="{{ $image->temporaryUrl() }}" width="120" />
+                                    @endforeach
+                                @else
+                                    @foreach ($galleryImages as $image)
+                                        <img src="{{ asset('bower_components/demo-bower/assets/images/products/' . $image->name) }}" width="120" />
+                                    @endforeach
+                                @endif
+                                @error('galleryImages') <p class="text-danger">{{ $message }}</p> @enderror
                             </div>
                         </div>
                         <div class="form-group">

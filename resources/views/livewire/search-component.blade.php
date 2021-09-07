@@ -126,18 +126,6 @@
                     </div>
                 </div><!-- Categories widget-->
 
-                <div class="widget mercado-widget filter-widget price-filter">
-                    <h2 class="widget-title">{{ __('shop.price') }}</h2>
-                    <div class="widget-content">
-                        <div id="slider-range"></div>
-                        <p>
-                            <label for="amount">{{ __('shop.price') }}:</label>
-                            <input type="text" id="amount" readonly>
-                            <button class="filter-submit">{{ __('shop.filter') }}</button>
-                        </p>
-                    </div>
-                </div><!-- Price-->
-
             </div><!--end sitebar-->
 
         </div><!--end row-->
