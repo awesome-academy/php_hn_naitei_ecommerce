@@ -7,6 +7,7 @@ use App\Models\Images;
 use App\Models\Product;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Cart;
 
 class CategoryComponent extends Component
 {
@@ -19,6 +20,15 @@ class CategoryComponent extends Component
         $this->sorting = config('constant.default_sorting');
         $this->pagesize = config('constant.default_pagesize');
         $this->categorySlug = $categorySlug;
+    }
+
+    public function store($product_id, $product_name, $product_price)
+    {
+        Cart::add($product_id, $product_name, config('constant.defautl_add_to_cart_amount'), $product_price)
+            ->associate(Product::class);
+        session()->flash('success_message', __('cart.added_success_msg'));
+
+        return redirect()->route('cart');
     }
 
     use WithPagination;

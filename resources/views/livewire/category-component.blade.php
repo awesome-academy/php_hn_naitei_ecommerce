@@ -26,9 +26,9 @@
                     <div class="wrap-right">
 
                         <div class="sort-item orderby ">
-                            <select name="orderby" class="use-chosen" >
+                            <select name="orderby" class="use-chosen" wire:model="sorting">
                                 <option value="menu_order" selected="selected">{{ __('shop.default_sorting') }}</option>
-                                <option value="rating">{{ __('shop.sort_by_rating') }}</option>
+                                <option value="date">{{ __('shop.sort_by_newest') }}</option>
                                 <option value="price">{{ __('shop.sort_by_price_low') }}</option>
                                 <option value="price-desc">{{ __('shop.sort_by_price_high') }}</option>
                             </select>
@@ -61,7 +61,7 @@
                                 <div class="product-info">
                                     <a href="#" class="product-name"><span>{{ $product->name }}</span></a>
                                     <div class="wrap-price"><span class="product-price">${{ $product->regular_price }}</span></div>
-                                    <a href="#" class="btn add-to-cart">{{ __('shop.add_to_cart') }}</a>
+                                    <a href="#" class="btn add-to-cart" wire:click.prevent="store({{ $product->id }}, '{{ $product->name }}', {{ $product->regular_price }})">{{ __('shop.add_to_cart') }}</a>
                                 </div>
                             </div>
                         </li>
